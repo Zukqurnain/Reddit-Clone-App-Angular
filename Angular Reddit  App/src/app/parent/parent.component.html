@@ -1,0 +1,13 @@
+<div class="container w-75 border  mt-3">
+  <div class="form-group">
+    <form>
+      <label for="Title">Title</label>
+      <input #newTitle name="title" class="form-control">
+      <label for="Link">Link</label>
+      <input #newLink class="form-control"  name="Link">
+      <button type="button" (click)="getData(newTitle.value , newLink.value)" class="btn mt-3 btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+
+<app-child  *ngFor="let article of articles"  [parentData]="article"></app-child>
